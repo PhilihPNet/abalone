@@ -1,0 +1,173 @@
+.dir{
+background: url(direction.svg);
+    /* content: url(direction.svg); */
+    transform: rotate(0deg);
+    position: absolute;
+    z-index: 1;
+    top: 40px;
+    left: 70px;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+	}
+.ball {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 50%;
+  position: relative;
+}
+//.black{background: url(./images/labyrP3.png);background-size:cover;height:45px;width:35px;border-radius: 0%;}
+.black{background: radial-gradient(circle at 50% 120%,  #323232, #0a0a0a 80%, #000000 100%);}
+
+//.white{background: url(./images/labyrP4.png);background-size:cover;height:45px;width:35px;border-radius: 0%;}
+.white{background: radial-gradient(circle at 50% 120%, #ffffff , #CCCccc 80%, #ffffff 100%);}
+
+.ball:before {
+  content: "";
+  position: absolute;
+  background: radial-gradient(circle at 50% 120%,  rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  bottom: 2.5%;
+  left: 5%;
+  opacity: 0.6;
+  height: 100%;
+  width: 90%;
+  -webkit-filter: blur(5px);
+  z-index: 2;
+}
+.ball:after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: relative;
+  top: 5%;
+  left: 10%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%,  rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 24%);
+  -webkit-transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+  -moz-transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+  -ms-transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+  -o-transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+  transform: translateX(-80px) translateY(-90px) skewX(-20deg);
+  -webkit-filter: blur(10px);
+}
+.ball .shadow {
+position: absolute;
+width: 100%;
+height: 100%;
+background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+-webkit-transform: rotateX(90deg) translateZ(-150px);
+-moz-transform: rotateX(90deg) translateZ(-150px);
+-ms-transform: rotateX(90deg) translateZ(-150px);
+-o-transform: rotateX(90deg) translateZ(-150px);
+transform: rotateX(90deg) translateZ(-150px);
+z-index: -1;
+}
+.num {
+width: 20px;
+    height: 20px;
+    margin: 30%;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+}
+.num:before {
+content: attr(data-attr);//"08";
+    display: block;
+    position: absolute;
+    text-align: center;
+    height: 8px;
+    width: 10px;
+    left: 0;
+    margin-left: 2px;
+    top: 0;
+    margin-top: 4px;
+    color: black;
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 15px;
+}
+.iris {
+  width: 40%;
+  height: 40%;
+  margin: 30%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, #208ab4 0%, #6fbfff 30%, #4381b2 100%);
+  //transform: translateX(68px) translateY(-60px) skewX(15deg) skewY(2deg);
+  position: absolute;
+ // animation: move-eye-skew 5s ease-out infinite;
+ left:0px;
+}
+.iris:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 37.5%;
+  height: 37.5%;
+  border-radius: 50%;
+  top: 31.25%;
+  left: 31.25%;
+  background: black;
+}
+.iris:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 31.25%;
+  height: 31.25%;
+  border-radius: 50%;
+  top: 18.75%;
+  left: 18.75%;
+  background: rgba(255, 255, 255, 0.2);
+}
+.bille {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  position:absolute;
+  margin: 20px;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -ms-perspective: 1200px;
+  -o-perspective: 1200px;
+  perspective: 1200px;
+  -webkit-perspective-origin: 50% 50%;
+  -moz-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+}
+#plateau{transform:Rotate(0deg);background:url(./images/herbe-texture.jpg)}
+#pave{
+	 height: 105px;
+    width: 105px;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    margin: auto;
+    border-radius: 50%;
+}
+.fleche{content:url(direction.svg);Rotate(1deg);}
+fieldset{
+color: mintcream;
+background-color:black;
+    font: small-caps;
+    font-size: 20px;
+	margin:6px;
+	border-radius:10px;
+}
+.scores{
+	position: absolute;
+    top: 0px;
+    left: 507px;
+    width: 55px;
+    height: 55px;
+    font-size: 50px;
+    padding: 2.5px;
+    text-align: center;
+    background-color: white;
+    border-radius: 50%;
+}
